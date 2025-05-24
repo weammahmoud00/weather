@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Weather</title>
+    <link rel="icon" href="img/weather.png">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-trans">
+        <div class="container w-75 pt-2 ">
+            <a class="navbar-brand d-flex " href="#">
+                <img class="navIcon" src="https://routeweather.netlify.app/images/logo@2x.png" alt="">
+                <div class="title d-flex flex-column ms-2">
+                    <h1>Weather</h1>
+                    <p>tagline goes here</p>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5 text-uppercase">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#about">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#services">Live cameras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#work">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="html/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+<header id="header" class="d-flex justify-content-center align-items-center">
+    <div id="head" class=" d-flex justify-content-center align-items-center">
+        <div class="container mx-auto mb-5">
+            <form>
+                <div class="mb-5 w-75 mx-auto d-flex justify-content-center align-items-center"">
+                    <input type="text" class="form-control py-3 rounded-5" id="userInput" aria-describedby="emailHelp" placeholder="Find your location...">
+                    <button id="searchButton" type="submit">Find</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="info" class="table row container overflow-hidden bg-black g-0">
+        <div class="col-4">
+            <div class="card border-0 first">
+                <div class="card-header d-flex justify-content-between text-white pt-3 ">
+                    <h6 id="day">day</h6>
+                    <h6 id="date">date</h6>
+                </div>
+                
+                <div class="card-body text-white px-3">
+                    <h6 id="place" class="card-title py-2"></h6>
+                    <h1 id="temp" class="py-3"></h1>
+                    <div id="icon" class="pt-4 ps-5"></div>
+                    <p id="state" class="card-text py-1 text-info"></p>
+                    <div class="status-icons d-flex mb-3">
+                        <div class="me-4 d-flex justify-content-center">
+                            <i class="fa-solid fa-umbrella me-2 mt-1"></i>
+                            <p id="humidity"></p>
+                        </div>
+                        <div class="mx-5 d-flex justify-content-center">
+                            <i class="fa-solid fa-wind me-2 mt-1"></i>
+                            <p id="wind"></p>
+                        </div>
+                        <div class="ms-4 d-flex justify-content-center">
+                            <i class="fa-solid fa-location-crosshairs me-2 mt-1"></i>
+                            <p id="direction"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-4">
+            <div class="card border-0 second ">
+                <div class="card-header text-center text-white pt-3">
+                    <h6 class="comingDay1"></h6>
+                </div>
+                
+                <div class="card-body text-white py-5 d-flex flex-column justify-content-center align-items-center">
+                    <div class="pt-4 comingIcon1"></div>
+                    <h1  class="py-2 maxTemp1"></h1>
+                    <h3  class=" minTemp1"></h3>
+                    <p class="card-text pb-4 comingState1 text-info"></p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card border-0 third">
+                <div class="card-header text-center text-white pt-3">
+                    <h6 class="comingDay2"></h6>
+                </div>
+                
+                <div class="card-body text-white d-flex flex-column justify-content-center align-items-center py-5">
+                    <div class="pt-4 comingIcon2"></div>
+                    <h1  class="py-2 maxTemp2"></h1>
+                    <h3  class=" minTemp2"></h3>
+                    <p class="card-text pb-4 comingState2 text-info"></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</header>
+    
+<footer>
+    <div class="container py-5 mx-auto">
+        <div class="footer d-flex">
+            <div class="mb-5 w-50 me-5 d-flex justify-content-center align-items-center">
+                <input type="text" class="form-control py-3 rounded-5" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Find your location...">
+                <button type="submit">Find</button>
+            </div>
+            <div class="footer-icons ms-5 mt-2 d-flex">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.google.com/"><i class="fa-brands fa-google"></i></a>
+                <a href="https://www.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+        </div>
+        <p class="text-white">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+    </div>
+</footer>
+
+<script src="js/index.js"></script>
+</body>
+</html>
